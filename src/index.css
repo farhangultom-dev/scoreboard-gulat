@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-white font-sans antialiased select-none;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* ==========================================
+   Print Stylesheet (Phase 11: Cetak Bagan & Jadwal)
+   ========================================== */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  header,
+  aside,
+  nav,
+  button,
+  select,
+  input,
+  .no-print {
+    display: none !important;
+  }
+
+  main {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    color: #000000 !important;
+  }
+
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    color: #000000 !important;
+  }
+
+  th,
+  td {
+    border: 1px solid #444444 !important;
+    color: #000000 !important;
+    background-color: transparent !important;
+  }
+
+  .bg-slate-900,
+  .bg-slate-950,
+  .bg-slate-800 {
+    background-color: #ffffff !important;
+    border-color: #cccccc !important;
+    color: #000000 !important;
+  }
+
+  .text-white,
+  .text-slate-200,
+  .text-slate-300,
+  .text-slate-400 {
+    color: #000000 !important;
+  }
+
+  .region-flag {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    border: 1px solid #cbd5e1 !important;
+    background-color: #ffffff !important;
+    break-inside: avoid !important;
+  }
+
+  .region-flag img {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    object-fit: contain !important;
+  }
+}
